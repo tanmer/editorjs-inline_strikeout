@@ -80,7 +80,7 @@ class InlineStrikeout {
       return;
     }
 
-    const termWrapper = this.api.selection.findParentTag(this.tag, InlineStrikeout.CSS);
+    const termWrapper = this.api.selection.findParentTag(this.tag);
 
     /**
      * If start or end of selection is in the highlighted block
@@ -158,7 +158,7 @@ class InlineStrikeout {
    * Check and change Term's state for current selection
    */
   checkState() {
-    const termTag = this.api.selection.findParentTag(this.tag, InlineStrikeout.CSS);
+    const termTag = this.api.selection.findParentTag(this.tag);
 
     this.button.classList.toggle(this.iconClasses.active, !!termTag);
   }
